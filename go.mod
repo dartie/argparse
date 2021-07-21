@@ -1,3 +1,3 @@
-module github.com/hellflame/argparse
+module github.com/dartie/argparse
 
 go 1.16
