@@ -5,7 +5,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/dartie/argparse"
+	"github.com/dartie/argparse/v3"
 	"io/ioutil"
 	"strconv"
 )
