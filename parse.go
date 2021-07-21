@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"errors"
 )
 
 // Parser is the top level struct
@@ -477,12 +478,12 @@ func (p *Parser) Parse(args []string) error {
 	if targetParser.showHelp != nil && *targetParser.showHelp {
 		targetParser.PrintHelp()
 		if !targetParser.config.ContinueOnHelp {
-			os.Exit(1)
+			return errors.New("1") //os.Exit(1)
 		}
 	}
 	if p.showShellCompletion != nil && *p.showShellCompletion {
 		fmt.Println(p.FormatCompletionScript())
-		os.Exit(0)
+		return errors.New("0") //os.Exit(0)
 	}
 	entries := append(p.entries, p.positionArgs...) // ready for Required checking & Default parsing
 	for _, _p := range p.subParser {
