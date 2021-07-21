@@ -9,7 +9,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/hellflame/argparse"
+	"github.com/dartie/argparse"
 	"io/ioutil"
 	"net/url"
 	"os"

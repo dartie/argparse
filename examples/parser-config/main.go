@@ -15,14 +15,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/hellflame/argparse"
+	"github.com/dartie/argparse"
 )
 
 func main() {
 	parser := argparse.NewParser("basic", "this is a basic program",
 		&argparse.ParserConfig{
 			Usage:                  "basic xxx",
-			EpiLog:                 "more detail please visit https://github.com/hellflame/argparse",
+			EpiLog:                 "more detail please visit https://github.com/dartie/argparse",
 			DisableHelp:            true,
 			ContinueOnHelp:         true,
 			DisableDefaultShowHelp: true,

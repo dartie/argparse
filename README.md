@@ -1,6 +1,6 @@
 # argparse
 
-[![GoDoc](https://godoc.org/github.com/hellflame/argparse?status.svg)](https://godoc.org/github.com/hellflame/argparse) [![Go Report Card](https://goreportcard.com/badge/github.com/hellflame/argparse)](https://goreportcard.com/report/github.com/hellflame/argparse) [![Coverage Status](https://coveralls.io/repos/github/hellflame/argparse/badge.svg?branch=master)](https://coveralls.io/github/hellflame/argparse?branch=master)
+[![GoDoc](https://godoc.org/github.com/dartie/argparse?status.svg)](https://godoc.org/github.com/dartie/argparse) [![Go Report Card](https://goreportcard.com/badge/github.com/dartie/argparse)](https://goreportcard.com/report/github.com/dartie/argparse) [![Coverage Status](https://coveralls.io/repos/github/dartie/argparse/badge.svg?branch=master)](https://coveralls.io/github/dartie/argparse?branch=master)
 
 [中文文档](docs/cn.md)
 
@@ -28,7 +28,7 @@ The aim of the package is to better serve programers to build better command lin
 ## Installation
 
 ```bash
-go get -u github.com/hellflame/argparse
+go get -u github.com/dartie/argparse
 ```
 
 > no dependence needed
@@ -42,7 +42,7 @@ package main
 
 import (
     "fmt"
-    "github.com/hellflame/argparse"
+    "github.com/dartie/argparse"
 )
 
 func main() {
@@ -72,8 +72,8 @@ optional arguments:
   -h, --help            show this help message
   -n NAME, --name NAME
 
-=> go run main.go -n hellflame
-hello hellflame
+=> go run main.go -n dartie
+hello dartie
 ```
 
 A few points
@@ -138,8 +138,8 @@ optional arguments:
   -n NAME, --name NAME
   -help, --help-me
 
-=> go run main.go --name hellflame
-hello hellflame
+=> go run main.go --name dartie
+hello dartie
 ```
 
 A few points:
@@ -740,7 +740,7 @@ func main() {
   parser := argparse.NewParser("basic", "this is a basic program",
 		&argparse.ParserConfig{
       Usage:                  "basic xxx",
-      EpiLog:                 "more detail please visit https://github.com/hellflame/argparse",
+      EpiLog:                 "more detail please visit https://github.com/dartie/argparse",
       DisableHelp:            true,
       ContinueOnHelp:         true,
       DisableDefaultShowHelp: true,
@@ -781,7 +781,7 @@ optional arguments: # no [-h/--help] flag is registerd, which is affected by Dis
   -n NAME, --name NAME
   -help, --help-me 
 
-more detail please visit https://github.com/hellflame/argparse  # <=== EpiLog
+more detail please visit https://github.com/dartie/argparse  # <=== EpiLog
 ```
 
 Except the comment above, `ContinueOnHelp` is only affective on your program process, which give you possibility to do something when default `help` is shown
@@ -828,7 +828,7 @@ type Option struct {
              │
              │
            ┌─┴──┐                   match helpArg:
-    args:  │ -h │-n  hellflame           ▼
+    args:  │ -h │-n  dartie           ▼
            └────┘                  ┌──isflag?───┐
                                    ▼            ▼
                                   done ┌──MultiValue?───┐
